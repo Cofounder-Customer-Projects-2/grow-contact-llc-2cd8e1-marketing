@@ -6,8 +6,9 @@ import Providers from "@/components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Managed Marketing Starter",
-  description: "A seeded Next.js marketing starter with conversion tracking hooks.",
+  title: "Grow — AI-Powered Talent Operating System",
+  description:
+    "Replace your recruiting stack and cut senior recruiter overhead. One calibrated AI platform that sources, screens, interviews, and predicts outcomes.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
