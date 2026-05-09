@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, Zap, Users, BarChart3, Mic } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -265,6 +266,7 @@ type Feature = {
   bullets: string[];
   accent: string;
   flip?: boolean;
+  image: string;
 };
 
 function FeatureRow({ feature }: { feature: Feature }) {
@@ -272,26 +274,19 @@ function FeatureRow({ feature }: { feature: Feature }) {
     <div
       className={`flex flex-col gap-12 md:items-center md:gap-16 ${feature.flip ? "md:flex-row-reverse" : "md:flex-row"}`}
     >
-      {/* Visual placeholder */}
+      {/* Feature preview image */}
       <div
         className="relative flex-1 overflow-hidden rounded-2xl border border-[var(--color-border)]"
         style={{ minHeight: 280 }}
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(135deg, ${feature.accent}18 0%, transparent 60%)`,
-          }}
+        <Image
+          src={feature.image}
+          alt={`${feature.label} preview`}
+          width={1200}
+          height={800}
+          className="h-full w-full object-cover object-top"
+          style={{ borderRadius: 16 }}
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-8">
-          <div
-            className="rounded-full p-4"
-            style={{ background: `${feature.accent}18` }}
-          >
-            <div className="h-10 w-10 rounded-full" style={{ background: feature.accent, opacity: 0.5 }} />
-          </div>
-          <span className="text-xs text-[var(--color-ink-3)]">{feature.label} preview</span>
-        </div>
       </div>
 
       {/* Copy */}
@@ -330,6 +325,7 @@ function Features() {
         "Respects GDPR, CCPA, and opt-out preferences",
       ],
       accent: "#2dd4a0",
+      image: "/feature-sourcing.png",
     },
     {
       label: "Async Screening",
@@ -343,6 +339,7 @@ function Features() {
       ],
       accent: "#60a5fa",
       flip: true,
+      image: "/feature-screening.png",
     },
     {
       label: "Interview Copilot",
@@ -355,6 +352,7 @@ function Features() {
         "Post-interview scorecard generated automatically",
       ],
       accent: "#a78bfa",
+      image: "/feature-interview.png",
     },
     {
       label: "Predictive Analytics",
@@ -368,6 +366,7 @@ function Features() {
       ],
       accent: "#fb923c",
       flip: true,
+      image: "/feature-analytics.png",
     },
   ];
 
