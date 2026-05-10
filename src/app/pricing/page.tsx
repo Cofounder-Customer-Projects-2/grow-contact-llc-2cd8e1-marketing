@@ -46,7 +46,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "$1,299",
+    price: "$1,499",
     period: "/mo",
     description: "For scaling teams hiring across multiple functions.",
     features: [
