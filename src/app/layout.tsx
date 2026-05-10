@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { MarketingAnalytics } from "@/components/MarketingAnalytics";
+import { CookieBanner } from "@/components/CookieBanner";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           />
         ) : null}
         <Providers>{children}</Providers>
+        <CookieBanner />
       </body>
     </html>
   );
