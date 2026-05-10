@@ -30,9 +30,8 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <p className="font-semibold text-[var(--color-ink)]">Legal</p>
-              <a href="#" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Privacy</a>
-              <a href="#" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Terms</a>
-              <a href="#" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Security</a>
+              <a href="/privacy" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Privacy</a>
+              <a href="/terms" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Terms</a>
             </div>
           </div>
         </div>

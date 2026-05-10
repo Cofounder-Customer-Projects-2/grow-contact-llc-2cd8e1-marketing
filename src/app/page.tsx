@@ -42,10 +42,10 @@ function Nav() {
       <div className="hidden items-center gap-8 text-sm text-[var(--color-ink-2)] md:flex">
         <a href="#features" className="transition-colors hover:text-[var(--color-ink)]">Features</a>
         <a href="#pricing" className="transition-colors hover:text-[var(--color-ink)]">Pricing</a>
-        <a href="#waitlist" className="transition-colors hover:text-[var(--color-ink)]">Customers</a>
+        <a href="/about" className="transition-colors hover:text-[var(--color-ink)]">Customers</a>
       </div>
       <a
-        href="#waitlist"
+        href="https://app.grow.contact/signup"
         className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[#080c10] transition-opacity hover:opacity-90"
       >
         Request demo
@@ -472,7 +472,7 @@ function Pricing() {
     },
     {
       name: "Growth",
-      price: "$1,299",
+      price: "$1,499",
       period: "/mo",
       description: "For scaling teams hiring across multiple functions.",
       features: [
@@ -558,7 +558,7 @@ function Pricing() {
               </ul>
 
               <a
-                href="#waitlist"
+                href="https://app.grow.contact/signup"
                 className={`mt-auto block rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-opacity hover:opacity-90 ${
                   highlight
                     ? "bg-[var(--color-accent)] text-[#080c10]"
@@ -629,12 +629,12 @@ function Footer() {
               <p className="font-semibold text-[var(--color-ink)]">Product</p>
               <a href="#features" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Features</a>
               <a href="#pricing" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Pricing</a>
-              <a href="#waitlist" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Changelog</a>
+              <a href="/blog" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Changelog</a>
             </div>
             <div className="flex flex-col gap-3">
               <p className="font-semibold text-[var(--color-ink)]">Company</p>
-              <a href="#waitlist" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">About</a>
-              <a href="#waitlist" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Blog</a>
+              <a href="/about" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">About</a>
+              <a href="/blog" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Blog</a>
               <a href="mailto:hello@grow.ai" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Contact</a>
             </div>
             <div className="flex flex-col gap-3">
