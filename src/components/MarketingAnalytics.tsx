@@ -1,9 +1,13 @@
+"use client";
+
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 const GOOGLE_TAG_MANAGER_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
 const META_PIXEL_ID =
   process.env.NEXT_PUBLIC_META_PIXEL_ID ||
   process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
+const STORAGE_KEY = "grow_cookie_consent";
 
 function normalizeGoogleTagManagerId(value: string | undefined): string | null {
   const trimmed = value?.trim();
@@ -46,13 +50,38 @@ fbq('init', ${JSON.stringify(pixelId)});
 fbq('track', 'PageView');`;
 }
 
+function hasConsent(): boolean {
+  try {
+    return localStorage.getItem(STORAGE_KEY) === "accepted";
+  } catch {
+    return false;
+  }
+}
+
 export function MarketingAnalytics() {
+  const [consented, setConsented] = useState(false);
+
+  useEffect(() => {
+    // Check existing consent on mount
+    if (hasConsent()) {
+      setConsented(true);
+      return;
+    }
+
+    // Listen for consent granted event dispatched by CookieBanner
+    function onConsent() {
+      setConsented(true);
+    }
+
+    window.addEventListener("grow:cookie-accepted", onConsent);
+    return () => window.removeEventListener("grow:cookie-accepted", onConsent);
+  }, []);
+
   const googleTagManagerId = normalizeGoogleTagManagerId(GOOGLE_TAG_MANAGER_ID);
   const metaPixelId = normalizeMetaPixelId(META_PIXEL_ID);
 
-  if (!googleTagManagerId && !metaPixelId) {
-    return null;
-  }
+  if (!consented) return null;
+  if (!googleTagManagerId && !metaPixelId) return null;
 
   return (
     <>

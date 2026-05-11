@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Pricing — Grow AI Recruiting Platform",
+  title: "Pricing — Grow AI Recruiting",
   description:
-    "Simple, predictable pricing for every stage of growth. From your first 5 hires to enterprise scale — no per-seat chaos, no hidden fees.",
+    "Simple, predictable pricing. Starter $499/mo, Growth $1,499/mo, Enterprise custom.",
+  openGraph: {
+    title: "Pricing — Grow AI Recruiting",
+    description:
+      "Simple, predictable pricing. Starter $499/mo, Growth $1,499/mo, Enterprise custom.",
+    type: "website",
+    url: "https://grow.contact/pricing",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

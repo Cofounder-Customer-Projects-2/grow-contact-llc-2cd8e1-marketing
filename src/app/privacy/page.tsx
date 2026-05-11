@@ -4,7 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy — Grow",
   description:
-    "How Grow Contact LLC collects, uses, and protects your personal data. GDPR and CCPA compliant.",
+    "How Grow collects, uses, and protects your data.",
+  openGraph: {
+    title: "Privacy Policy — Grow",
+    description: "How Grow collects, uses, and protects your data.",
+    type: "website",
+    url: "https://grow.contact/privacy",
+  },
 };
 
 // ─── Shared layout for legal pages ──────────────────────────────────────────

@@ -5,9 +5,16 @@ import { Footer } from "@/components/Footer";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Blog — Grow AI Recruiting Platform",
+  title: "Blog — Grow",
   description:
-    "Insights on AI-powered recruiting, hiring strategy, interview best practices, and how modern talent teams are building faster pipelines.",
+    "Hiring insights, AI recruiting trends, and best practices from the Grow team.",
+  openGraph: {
+    title: "Blog — Grow",
+    description:
+      "Hiring insights, AI recruiting trends, and best practices from the Grow team.",
+    type: "website",
+    url: "https://grow.contact/blog",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

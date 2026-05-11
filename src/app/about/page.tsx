@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About — Grow AI Recruiting Platform",
+  title: "About — Grow",
   description:
-    "Learn about Grow's mission to replace fragmented recruiting stacks with one AI-powered platform that sources, screens, and interviews candidates for high-growth teams.",
+    "We're building the AI talent operating system for the next generation of high-growth teams.",
+  openGraph: {
+    title: "About — Grow",
+    description:
+      "We're building the AI talent operating system for the next generation of high-growth teams.",
+    type: "website",
+    url: "https://grow.contact/about",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {
