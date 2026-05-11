@@ -213,6 +213,17 @@ export default function IntegrationsPage() {
           </div>
         </section>
 
+        {/* Hero screenshot */}
+        <section className="px-6 pb-4 md:px-12">
+          <div className="mx-auto max-w-5xl">
+            <img
+              src="/integrations-hub.jpg"
+              alt="Grow integrations hub dashboard showing connected apps"
+              className="w-full rounded-2xl border border-[var(--color-border)] shadow-2xl"
+            />
+          </div>
+        </section>
+
         {/* Featured integrations */}
         <section className="border-t border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-20 md:px-12">
           <div className="mx-auto max-w-5xl">
