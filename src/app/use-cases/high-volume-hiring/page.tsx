@@ -101,6 +101,17 @@ export default function HighVolumeHiringPage() {
           </div>
         </section>
 
+        {/* Hero screenshot */}
+        <section className="px-6 pb-4 md:px-12">
+          <div className="mx-auto max-w-5xl">
+            <img
+              src="/usecase-high-volume-hiring.png"
+              alt="High-volume hiring applicant queue dashboard"
+              className="w-full rounded-2xl border border-[var(--color-border)] shadow-2xl"
+            />
+          </div>
+        </section>
+
         {/* Stats */}
         <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-12 md:px-12">
           <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-4">

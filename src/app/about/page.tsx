@@ -53,21 +53,25 @@ const team = [
     name: "Alex Hartmann",
     role: "Co-founder & CEO",
     bio: "Previously Head of Talent at two Series C SaaS companies. Spent 8 years watching great candidates get lost in broken processes.",
+    avatar: "/team-alex-hartmann.png",
   },
   {
     name: "Priya Nair",
     role: "Co-founder & CTO",
     bio: "Built ML systems at a top recruiting tech company. Led the team behind a candidate matching engine used by 50,000+ employers.",
+    avatar: "/team-priya-nair.png",
   },
   {
     name: "Marcus Chen",
     role: "Head of Product",
     bio: "Former PM at a leading ATS. Knows every pain point in the recruiter workflow and is determined to fix all of them.",
+    avatar: "/team-marcus-chen.jpg",
   },
   {
     name: "Sofia Lindqvist",
     role: "Head of Customer Success",
     bio: "Helped 200+ recruiting teams onboard and scale. Obsessed with making Grow genuinely useful from day one.",
+    avatar: "/team-sofia-lindqvist.png",
   },
 ];
 
@@ -203,15 +207,16 @@ export default function AboutPage() {
               </h2>
             </div>
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {team.map(({ name, role, bio }) => (
+              {team.map(({ name, role, bio, avatar }) => (
                 <div
                   key={name}
                   className="flex flex-col gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
                 >
-                  {/* Avatar placeholder */}
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-surface-2)] text-lg font-bold text-[var(--color-accent)]">
-                    {name.charAt(0)}
-                  </div>
+                  <img
+                    src={avatar}
+                    alt={name}
+                    className="h-14 w-14 rounded-xl object-cover object-top"
+                  />
                   <div>
                     <p className="font-semibold text-[var(--color-ink)]">{name}</p>
                     <p className="text-xs text-[var(--color-accent)]">{role}</p>
