@@ -30,6 +30,7 @@ const posts = [
   {
     slug: "#",
     category: "AI Recruiting",
+    image: "/blog-featured-ai-sourcing.png",
     title: "How AI Sourcing Changed Our Time-to-Hire from 42 Days to 14",
     excerpt:
       "We followed one Series B SaaS team as they replaced their manual sourcing process with Grow's always-on AI engine. Here's exactly what changed and what didn't.",
@@ -42,6 +43,7 @@ const posts = [
   {
     slug: "#",
     category: "Interview Copilot",
+    image: "/blog-interview-copilot.jpg",
     title: "The Interview Copilot Guide: Getting the Most from Live AI Assistance",
     excerpt:
       "Live transcription, real-time question suggestions, automatic scorecards — here's a practical walkthrough of how to use Interview Copilot without becoming dependent on it.",
@@ -54,6 +56,7 @@ const posts = [
   {
     slug: "#",
     category: "Hiring Strategy",
+    image: "/blog-structured-interviews.jpg",
     title: "Why Structured Interviews Outperform Unstructured Ones by 2×",
     excerpt:
       "The research has been clear for decades. Yet most interviews are still unstructured. Here's why — and how to change that without slowing down your process.",
@@ -66,6 +69,7 @@ const posts = [
   {
     slug: "#",
     category: "Outreach",
+    image: "/blog-outreach-patterns.jpg",
     title: "5 Outreach Message Patterns That Actually Get Responses from Passive Candidates",
     excerpt:
       "We analyzed 200,000+ outreach messages sent through Grow and found five patterns that consistently outperform generic templates. The differences are subtle but the gap is large.",
@@ -78,6 +82,7 @@ const posts = [
   {
     slug: "#",
     category: "Technical Recruiting",
+    image: "/blog-technical-recruiting.png",
     title: "Screening Engineers at Scale Without Grinding Your Team",
     excerpt:
       "High-volume technical recruiting is one of the hardest operational problems in talent. This is how modern engineering teams use AI to screen 10× more candidates without burning out their interviewers.",
@@ -90,6 +95,7 @@ const posts = [
   {
     slug: "#",
     category: "Analytics",
+    image: "/blog-hiring-metrics.jpg",
     title: "The Metrics Every Head of Talent Should Be Tracking in 2026",
     excerpt:
       "Time-to-fill is a lagging indicator. Offer acceptance rate is a symptom. Here are the leading metrics that actually predict whether your recruiting process is healthy.",
@@ -105,6 +111,7 @@ const categories = ["All", "AI Recruiting", "Interview Copilot", "Hiring Strateg
 
 export default function BlogPage() {
   const [featuredPost, ...restPosts] = posts;
+  type Post = typeof posts[number];
 
   return (
     <>
@@ -139,14 +146,13 @@ export default function BlogPage() {
               href={featuredPost.slug}
               className="mt-6 flex flex-col gap-8 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] p-8 transition-colors hover:border-[var(--color-accent)]/30 md:flex-row md:items-center"
             >
-              {/* Featured visual placeholder */}
-              <div
-                className="flex flex-1 items-center justify-center rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]"
-                style={{ minHeight: 200 }}
-              >
-                <div
-                  className="h-16 w-16 rounded-2xl"
-                  style={{ background: `${featuredPost.accent}18` }}
+              {/* Featured visual */}
+              <div className="flex flex-1 overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+                <img
+                  src={featuredPost.image}
+                  alt={featuredPost.title}
+                  className="h-full w-full object-cover"
+                  style={{ minHeight: 200 }}
                 />
               </div>
               <div className="flex flex-1 flex-col gap-4">
@@ -198,20 +204,18 @@ export default function BlogPage() {
             </div>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {restPosts.map(({ slug, category, title, excerpt, author, date, readTime, accent }) => (
+              {restPosts.map(({ slug, category, title, excerpt, author, date, readTime, accent, image }: Post) => (
                 <a
                   key={title}
                   href={slug}
                   className="flex flex-col gap-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]/30"
                 >
-                  {/* Post visual placeholder */}
-                  <div
-                    className="flex h-36 items-center justify-center rounded-xl border border-[var(--color-border)]"
-                    style={{ background: `${accent}08` }}
-                  >
-                    <div
-                      className="h-10 w-10 rounded-xl"
-                      style={{ background: `${accent}20` }}
+                  {/* Post visual */}
+                  <div className="overflow-hidden rounded-xl border border-[var(--color-border)]">
+                    <img
+                      src={image}
+                      alt={title}
+                      className="h-36 w-full object-cover"
                     />
                   </div>
 

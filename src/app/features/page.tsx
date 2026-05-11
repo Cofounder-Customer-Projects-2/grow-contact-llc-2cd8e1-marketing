@@ -30,6 +30,7 @@ const features = [
     tag: "AI Sourcing",
     icon: <Zap className="h-6 w-6" />,
     accent: "#2dd4a0",
+    image: "/feature-ai-sourcing.jpg",
     heading: "Always-on pipelines. Zero manual search.",
     body: "Define a role once. Grow's sourcing engine runs continuously across hundreds of profiles, applies your calibration criteria, and surfaces ranked candidates before you've finished your morning standup. It learns from your decisions over time, so every hire makes the next one better.",
     bullets: [
@@ -44,6 +45,7 @@ const features = [
     tag: "Outreach Automation",
     icon: <Mail className="h-6 w-6" />,
     accent: "#60a5fa",
+    image: "/feature-outreach.png",
     heading: "Personalized outreach at scale. Without sounding robotic.",
     body: "Grow crafts individualized outreach messages for each candidate based on their profile, experience, and the role requirements. Multi-step sequences handle follow-ups automatically, so no warm lead falls through the cracks.",
     bullets: [
@@ -58,6 +60,7 @@ const features = [
     tag: "Interview Copilot",
     icon: <Mic className="h-6 w-6" />,
     accent: "#a78bfa",
+    image: "/feature-interview-copilot.png",
     heading: "Show up to every interview like a pro.",
     body: "Grow joins your Zoom, Google Meet, or Microsoft Teams calls as a silent observer. It transcribes in real time, surfaces competency-based follow-up questions, flags topics not yet covered, and generates a structured scorecard the moment the call ends.",
     bullets: [
@@ -73,6 +76,7 @@ const features = [
     tag: "Candidate Pipeline",
     icon: <Kanban className="h-6 w-6" />,
     accent: "#fb923c",
+    image: "/feature-pipeline.png",
     heading: "One view of every candidate. Across every role.",
     body: "A clean Kanban-style pipeline that shows exactly where every candidate stands. Move them through stages, leave notes, tag teammates, and see the full history of every interaction — all in one place.",
     bullets: [
@@ -88,6 +92,7 @@ const features = [
     tag: "Email Inbox",
     icon: <Mail className="h-6 w-6" />,
     accent: "#34d399",
+    image: "/feature-inbox.jpg",
     heading: "All your recruiting conversations. One inbox.",
     body: "Stop switching between Gmail and your ATS. Grow's shared recruiting inbox syncs all candidate emails, threads outreach replies, and lets your whole team respond — with AI drafts ready when you need them.",
     bullets: [
@@ -102,6 +107,7 @@ const features = [
     tag: "Predictive Analytics",
     icon: <BarChart3 className="h-6 w-6" />,
     accent: "#f59e0b",
+    image: "/feature-analytics.jpg",
     heading: "Know the outcome before you extend the offer.",
     body: "Grow's prediction models are trained on your historical hires and industry benchmarks. Get time-to-hire forecasts, offer acceptance probability, and 12-month retention risk for every candidate — so you can prioritize your highest-signal opportunities.",
     bullets: [
@@ -184,26 +190,21 @@ export default function FeaturesPage() {
         {/* Feature deep dives */}
         <section className="px-6 py-8 md:px-12">
           <div className="mx-auto flex max-w-5xl flex-col gap-0">
-            {features.map(({ tag, accent, heading, body, bullets }, i) => (
+            {features.map(({ tag, accent, heading, body, bullets, image }, i) => (
               <div
                 key={tag}
                 className={`flex flex-col gap-12 border-b border-[var(--color-border)] py-20 md:items-center md:gap-16 ${
                   i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
               >
-                {/* Visual placeholder */}
-                <div
-                  className="flex flex-1 items-center justify-center rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]"
-                  style={{ minHeight: 260 }}
-                >
-                  <div
-                    className="flex h-20 w-20 items-center justify-center rounded-2xl"
-                    style={{ background: `${accent}18`, color: accent }}
-                  >
-                    <div className="h-10 w-10">
-                      {features[i].icon}
-                    </div>
-                  </div>
+                {/* Feature visual */}
+                <div className="flex flex-1 overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+                  <img
+                    src={image}
+                    alt={tag}
+                    className="h-full w-full object-cover"
+                    style={{ minHeight: 260 }}
+                  />
                 </div>
 
                 {/* Copy */}
