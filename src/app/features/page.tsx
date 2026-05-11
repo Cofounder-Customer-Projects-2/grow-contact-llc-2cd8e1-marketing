@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Features — Grow AI Recruiting Platform",
+  title: "Features — Grow AI Recruiting",
   description:
-    "Explore all Grow features: AI candidate sourcing, automated outreach, Interview Copilot for live meetings, candidate pipeline management, and email inbox — everything you need to hire faster.",
+    "AI sourcing, async screening, Interview Copilot, and pipeline analytics — all in one platform.",
+  openGraph: {
+    title: "Features — Grow AI Recruiting",
+    description:
+      "AI sourcing, async screening, Interview Copilot, and pipeline analytics — all in one platform.",
+    type: "website",
+    url: "https://grow.contact/features",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
 import { MarketingAnalytics } from "@/components/MarketingAnalytics";
+import { PlausibleAnalytics } from "@/components/PlausibleAnalytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import Providers from "@/components/Providers";
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="min-h-screen">
         <MarketingAnalytics />
+        <PlausibleAnalytics />
         {isPreviewEnvironment ? (
           <Script
             src="https://app.cofounder.co/agentation/widget.js"

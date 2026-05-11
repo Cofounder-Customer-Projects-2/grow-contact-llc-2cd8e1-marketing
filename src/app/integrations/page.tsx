@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Integrations — Grow AI Recruiting Platform",
+  title: "Integrations — Grow AI Recruiting",
   description:
-    "Grow connects with the tools your team already uses — Microsoft Teams, Zoom, Google Meet, LinkedIn, and more. One platform, zero context-switching.",
+    "Connect Grow with your ATS, Slack, LinkedIn, Gmail, and 50+ tools.",
+  openGraph: {
+    title: "Integrations — Grow AI Recruiting",
+    description:
+      "Connect Grow with your ATS, Slack, LinkedIn, Gmail, and 50+ tools.",
+    type: "website",
+    url: "https://grow.contact/integrations",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "High-Volume Hiring — Grow AI Recruiting Platform",
+  title: "High-Volume Hiring — Grow",
   description:
-    "How operations, retail, and logistics teams use Grow to process hundreds of applicants per week — with structured screening, fast scheduling, and consistent quality at scale.",
+    "Process hundreds of candidates without sacrificing quality. Automate screening at scale.",
+  openGraph: {
+    title: "High-Volume Hiring — Grow",
+    description:
+      "Process hundreds of candidates without sacrificing quality. Automate screening at scale.",
+    type: "website",
+    url: "https://grow.contact/use-cases/high-volume-hiring",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

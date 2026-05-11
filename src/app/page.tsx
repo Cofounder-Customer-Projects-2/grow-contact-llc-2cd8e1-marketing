@@ -3,9 +3,16 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle, Zap, Users, BarChart3, Mic } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Grow — AI-Powered Talent Operating System",
+  title: "Grow — AI Recruiting Platform for High-Growth Teams",
   description:
-    "Replace your recruiting stack and cut senior recruiter overhead. One calibrated AI platform that sources, screens, interviews, and predicts outcomes.",
+    "Source, screen, and hire faster with Grow's AI talent operating system. Cut time-to-hire in half.",
+  openGraph: {
+    title: "Grow — AI Recruiting Platform for High-Growth Teams",
+    description:
+      "Source, screen, and hire faster with Grow's AI talent operating system. Cut time-to-hire in half.",
+    type: "website",
+    url: "https://grow.contact",
+  },
 };
 
 // ─── Shared primitives ─────────────────────────────────────────────────────

@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Executive Search — Grow AI Recruiting Platform",
+  title: "Executive Search — Grow",
   description:
-    "How executive search firms and in-house talent teams use Grow to identify, vet, and close senior leaders — with less manual research and better signal.",
+    "Find and close executive talent with AI-assisted search and structured evaluation.",
+  openGraph: {
+    title: "Executive Search — Grow",
+    description:
+      "Find and close executive talent with AI-assisted search and structured evaluation.",
+    type: "website",
+    url: "https://grow.contact/use-cases/executive-search",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

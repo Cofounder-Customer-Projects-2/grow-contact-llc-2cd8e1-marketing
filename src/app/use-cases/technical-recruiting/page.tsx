@@ -4,9 +4,16 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Technical Recruiting — Grow AI Recruiting Platform",
+  title: "Technical Recruiting — Grow",
   description:
-    "How high-growth engineering teams use Grow to source, screen, and hire software engineers 3× faster — without burning out your interviewers or compromising on quality.",
+    "Hire engineers faster with AI sourcing, async technical screens, and interview intelligence.",
+  openGraph: {
+    title: "Technical Recruiting — Grow",
+    description:
+      "Hire engineers faster with AI sourcing, async technical screens, and interview intelligence.",
+    type: "website",
+    url: "https://grow.contact/use-cases/technical-recruiting",
+  },
 };
 
 function Tag({ children }: { children: React.ReactNode }) {

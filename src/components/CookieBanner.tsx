@@ -27,6 +27,8 @@ export function CookieBanner() {
       // ignore
     }
     setVisible(false);
+    // Notify analytics components that consent has been granted
+    window.dispatchEvent(new Event("grow:cookie-accepted"));
   }
 
   function decline() {

@@ -4,7 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service — Grow",
   description:
-    "Terms of Service for Grow Contact LLC's AI-powered recruiting platform. Iceland governing law.",
+    "Terms governing your use of the Grow platform.",
+  openGraph: {
+    title: "Terms of Service — Grow",
+    description: "Terms governing your use of the Grow platform.",
+    type: "website",
+    url: "https://grow.contact/terms",
+  },
 };
 
 // ─── Shared legal layout components ─────────────────────────────────────────
