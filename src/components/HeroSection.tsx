@@ -1,13 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Link from "next/link";
-
-// Canvas animation — client-only, no SSR needed
-const HeroAnimation = dynamic(
-  () => import("./HeroAnimation").then((m) => m.HeroAnimation),
-  { ssr: false }
-);
 
 export function HeroSection() {
   return (
@@ -129,8 +122,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Animated node-network — below the metrics strip */}
-      <HeroAnimation />
     </section>
   );
 }
