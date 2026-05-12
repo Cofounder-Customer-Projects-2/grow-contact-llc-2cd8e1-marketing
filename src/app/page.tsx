@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Zap, Users, BarChart3, Mic } from "lucide-react";
 import { HeroSection } from "@/components/HeroSection";
+import { SocialProofSection } from "@/components/SocialProofSection";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
@@ -524,6 +525,7 @@ export default function HomePage() {
       <Nav />
       <main>
         <HeroSection />
+        <SocialProofSection />
         <Problem />
         <SolutionOverview />
         <Features />
