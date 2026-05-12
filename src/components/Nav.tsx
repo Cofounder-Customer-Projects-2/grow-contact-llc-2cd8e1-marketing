@@ -27,6 +27,16 @@ export function Nav() {
         ].join(" ")}
       >
         <a href="/" className="flex items-center gap-2">
+          {/* G logo icon — sourced from app repo src/assets/logo.png */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt=""
+            aria-hidden="true"
+            className="h-8 w-auto"
+            width={32}
+            height={32}
+          />
           <span className="text-lg font-bold tracking-tight text-[var(--color-ink)]">
             Grow
           </span>
