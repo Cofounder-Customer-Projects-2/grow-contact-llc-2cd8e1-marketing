@@ -36,7 +36,7 @@ const features = [
   {
     tag: "AI Sourcing",
     icon: <Zap className="h-6 w-6" />,
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
     image: "/feature-ai-sourcing.jpg",
     heading: "Always-on pipelines. Zero manual search.",
     body: "Define a role once. Grow's sourcing engine runs continuously across hundreds of profiles, applies your calibration criteria, and surfaces ranked candidates before you've finished your morning standup. It learns from your decisions over time, so every hire makes the next one better.",
@@ -139,7 +139,7 @@ export default function FeaturesPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsla(262,83%,58%,0.6) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
@@ -149,7 +149,7 @@ export default function FeaturesPage() {
               Every tool your recruiting team needs.{" "}
               <span
                 style={{
-                  background: "linear-gradient(90deg, #2dd4a0, #60efca)",
+                  background: "linear-gradient(90deg, hsl(262 83% 65%), hsl(262 83% 50%))",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -162,7 +162,7 @@ export default function FeaturesPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started free <ArrowRight className="h-4 w-4" />
             </a>
@@ -249,7 +249,7 @@ export default function FeaturesPage() {
             <div
               aria-hidden
               className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px]"
-              style={{ background: "radial-gradient(ellipse at top, #2dd4a020, transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse at top, hsla(262,83%,58%,0.08), transparent 70%)" }}
             />
             <SectionLabel>Ready to hire faster?</SectionLabel>
             <h2 className="relative text-4xl font-bold tracking-tight text-[var(--color-ink)]">
@@ -260,7 +260,7 @@ export default function FeaturesPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started free <ArrowRight className="h-4 w-4" />
             </a>

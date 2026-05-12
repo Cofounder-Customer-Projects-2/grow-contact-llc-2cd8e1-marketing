@@ -57,7 +57,7 @@ const workflow = [
     icon: <Code className="h-5 w-5" />,
     title: "Define the role with precision",
     desc: "Feed Grow your job description, GitHub preferences, required stack, and calibration rubric. It takes 15 minutes and replaces weeks of back-and-forth.",
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
   },
   {
     step: "02",
@@ -93,7 +93,7 @@ export default function TechnicalRecruitingPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsla(262,83%,58%,0.6) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
@@ -103,7 +103,7 @@ export default function TechnicalRecruitingPage() {
               Hire great engineers.{" "}
               <span
                 style={{
-                  background: "linear-gradient(90deg, #2dd4a0, #60efca)",
+                  background: "linear-gradient(90deg, hsl(262 83% 65%), hsl(262 83% 50%))",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -117,7 +117,7 @@ export default function TechnicalRecruitingPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://app.grow.contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Get started <ArrowRight className="h-4 w-4" />
               </a>
@@ -277,7 +277,7 @@ export default function TechnicalRecruitingPage() {
             <div
               aria-hidden
               className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px]"
-              style={{ background: "radial-gradient(ellipse at top, #2dd4a020, transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse at top, hsla(262,83%,58%,0.08), transparent 70%)" }}
             />
             <Tag>Technical recruiting</Tag>
             <h2 className="relative text-4xl font-bold tracking-tight text-[var(--color-ink)]">
@@ -288,7 +288,7 @@ export default function TechnicalRecruitingPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started free <ArrowRight className="h-4 w-4" />
             </a>

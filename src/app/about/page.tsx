@@ -36,7 +36,7 @@ const values = [
   {
     name: "Speed without compromise",
     desc: "We believe you shouldn't have to choose between moving fast and making good hires. AI makes both possible.",
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
   },
   {
     name: "Transparency in every signal",
@@ -93,7 +93,7 @@ export default function AboutPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsla(262,83%,58%,0.6) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
@@ -103,7 +103,7 @@ export default function AboutPage() {
               We're building the recruiting team{" "}
               <span
                 style={{
-                  background: "linear-gradient(90deg, #2dd4a0, #60efca)",
+                  background: "linear-gradient(90deg, hsl(262 83% 65%), hsl(262 83% 50%))",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -241,7 +241,7 @@ export default function AboutPage() {
             <div
               aria-hidden
               className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px]"
-              style={{ background: "radial-gradient(ellipse at top, #2dd4a020, transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse at top, hsla(262,83%,58%,0.08), transparent 70%)" }}
             />
             <Tag>Join us</Tag>
             <h2 className="relative text-4xl font-bold tracking-tight text-[var(--color-ink)]">
@@ -252,7 +252,7 @@ export default function AboutPage() {
             </p>
             <a
               href="/contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get in touch <ArrowRight className="h-4 w-4" />
             </a>

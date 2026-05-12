@@ -37,7 +37,7 @@ const steps = [
     icon: <Search className="h-5 w-5" />,
     title: "Deep market mapping",
     desc: "Grow builds a landscape of qualified executives from public signals — career arc, board affiliations, media mentions, executive transitions — before you make a single outreach.",
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
   },
   {
     icon: <Shield className="h-5 w-5" />,
@@ -94,7 +94,7 @@ export default function ExecutiveSearchPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://app.grow.contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Get started <ArrowRight className="h-4 w-4" />
               </a>
@@ -232,7 +232,7 @@ export default function ExecutiveSearchPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started free <ArrowRight className="h-4 w-4" />
             </a>

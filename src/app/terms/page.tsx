@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 function LegalNav() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-[var(--color-border)] bg-[#080c10]/80 px-6 py-4 backdrop-blur-md md:px-12">
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-[var(--color-border)] bg-[hsl(260_87%_3%)]/80 px-6 py-4 backdrop-blur-md md:px-12">
       <Link href="/" className="flex items-center gap-2">
         <span className="text-lg font-bold tracking-tight text-[var(--color-ink)]">
           Grow

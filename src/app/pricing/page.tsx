@@ -129,7 +129,7 @@ export default function PricingPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsla(262,83%,58%,0.6) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
@@ -159,7 +159,7 @@ export default function PricingPage() {
                 >
                   {highlight && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold text-[#080c10]">
+                      <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold text-white">
                         Most popular
                       </span>
                     </div>
@@ -186,7 +186,7 @@ export default function PricingPage() {
                     href={ctaHref}
                     className={`mt-auto block rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-opacity hover:opacity-90 ${
                       highlight
-                        ? "bg-[var(--color-accent)] text-[#080c10]"
+                        ? "bg-[var(--color-accent)] text-white"
                         : "border border-[var(--color-border)] text-[var(--color-ink-2)] hover:text-[var(--color-ink)]"
                     }`}
                   >
@@ -284,7 +284,7 @@ export default function PricingPage() {
             <div
               aria-hidden
               className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px]"
-              style={{ background: "radial-gradient(ellipse at top, #2dd4a020, transparent 70%)" }}
+              style={{ background: "radial-gradient(ellipse at top, hsla(262,83%,58%,0.08), transparent 70%)" }}
             />
             <Tag>14 days free</Tag>
             <h2 className="relative text-4xl font-bold tracking-tight text-[var(--color-ink)]">
@@ -295,7 +295,7 @@ export default function PricingPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Start free trial <ArrowRight className="h-4 w-4" />
             </a>

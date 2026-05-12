@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] px-6 py-12 md:px-12">
+    <footer className="border-t border-[var(--color-border)] bg-[hsl(260_87%_3%)] px-6 py-12 md:px-12">
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="flex flex-col gap-2">
