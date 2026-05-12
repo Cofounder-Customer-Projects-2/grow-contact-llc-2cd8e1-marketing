@@ -70,7 +70,7 @@ export function CookieBanner() {
           <button
             type="button"
             onClick={accept}
-            className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+            className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
             Accept
           </button>

@@ -8,7 +8,7 @@ export function Nav() {
   const [useCasesOpen, setUseCasesOpen] = useState(false);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-[var(--color-border)] bg-[#080c10]/80 px-6 py-4 backdrop-blur-md md:px-12">
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-[var(--color-border)] bg-[hsl(260_87%_3%)]/80 px-6 py-4 backdrop-blur-md md:px-12">
       <a href="/" className="flex items-center gap-2">
         <span className="text-lg font-bold tracking-tight text-[var(--color-ink)]">
           Grow
@@ -73,7 +73,8 @@ export function Nav() {
         </a>
         <a
           href="https://app.grow.contact"
-          className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+          className="rounded-full bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          style={{ boxShadow: "0 0 16px hsla(262,83%,58%,0.35)" }}
         >
           Get started
         </a>
@@ -91,7 +92,7 @@ export function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="absolute inset-x-0 top-full border-b border-[var(--color-border)] bg-[#080c10] px-6 py-4 md:hidden">
+        <div className="absolute inset-x-0 top-full border-b border-[var(--color-border)] bg-[hsl(260_87%_3%)] px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4 text-sm">
             <a href="/features" className="text-[var(--color-ink-2)] hover:text-[var(--color-ink)]" onClick={() => setOpen(false)}>Features</a>
             <a href="/use-cases/technical-recruiting" className="text-[var(--color-ink-2)] hover:text-[var(--color-ink)]" onClick={() => setOpen(false)}>Technical Recruiting</a>
@@ -104,7 +105,7 @@ export function Nav() {
             <a href="/contact" className="text-[var(--color-ink-2)] hover:text-[var(--color-ink)]" onClick={() => setOpen(false)}>Contact</a>
             <a
               href="https://app.grow.contact"
-              className="mt-2 rounded-lg bg-[var(--color-accent)] px-4 py-2.5 text-center font-semibold text-[#080c10]"
+              className="mt-2 rounded-full bg-[var(--color-accent)] px-4 py-2.5 text-center font-semibold text-white"
               onClick={() => setOpen(false)}
             >
               Get started

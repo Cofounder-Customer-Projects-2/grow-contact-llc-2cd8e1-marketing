@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, Zap, Users, BarChart3, Mic } from "lucide-react";
+import { HeroSection } from "@/components/HeroSection";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Grow — AI Recruiting Platform for High-Growth Teams",
@@ -33,114 +36,9 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-// ─── Nav ────────────────────────────────────────────────────────────────────
-
-function Nav() {
-  return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-[var(--color-border)] bg-[#080c10]/80 px-6 py-4 backdrop-blur-md md:px-12">
-      <a href="/" className="flex items-center gap-2">
-        <span className="text-lg font-bold tracking-tight text-[var(--color-ink)]">
-          Grow
-        </span>
-        <span className="hidden rounded bg-[var(--color-accent-dim)] px-1.5 py-0.5 text-[11px] font-semibold text-[var(--color-accent)] sm:inline">
-          BETA
-        </span>
-      </a>
-      <div className="hidden items-center gap-8 text-sm text-[var(--color-ink-2)] md:flex">
-        <a href="#features" className="transition-colors hover:text-[var(--color-ink)]">Features</a>
-        <a href="#pricing" className="transition-colors hover:text-[var(--color-ink)]">Pricing</a>
-        <a href="/about" className="transition-colors hover:text-[var(--color-ink)]">Customers</a>
-      </div>
-      <a
-        href="https://app.grow.contact/signup"
-        className="rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-[#080c10] transition-opacity hover:opacity-90"
-      >
-        Request demo
-      </a>
-    </nav>
-  );
-}
-
 // ─── Hero ───────────────────────────────────────────────────────────────────
 
-function Hero() {
-  return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-32 text-center">
-      {/* Ambient glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full opacity-20"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
-
-      <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
-        <Tag>AI Talent Operating System</Tag>
-
-        <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-[var(--color-ink)] sm:text-6xl md:text-7xl">
-          Hire fast.
-          <br />
-          <span
-            style={{
-              background: "linear-gradient(90deg, #2dd4a0, #60efca)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Scale without headcount.
-          </span>
-        </h1>
-
-        <p className="max-w-2xl text-lg leading-relaxed text-[var(--color-ink-2)] md:text-xl">
-          Grow replaces your recruiting stack and senior recruiter overhead with one
-          calibrated AI platform — continuous sourcing, async screening, live interview
-          copilot, and predictive analytics.
-        </p>
-
-        <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <a
-            id="waitlist"
-            href="mailto:hello@grow.ai?subject=Demo Request"
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-[#080c10] transition-opacity hover:opacity-90"
-          >
-            Request a demo <ArrowRight className="h-4 w-4" />
-          </a>
-          <a
-            href="#features"
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-3 text-base font-medium text-[var(--color-ink-2)] transition-colors hover:text-[var(--color-ink)]"
-          >
-            See how it works
-          </a>
-        </div>
-
-        <p className="text-sm text-[var(--color-ink-3)]">
-          Built for Series A–C teams · No recruiter required
-        </p>
-      </div>
-
-      {/* Hero metrics strip */}
-      <div className="relative z-10 mt-20 grid grid-cols-2 gap-4 md:grid-cols-4 w-full max-w-3xl">
-        {[
-          { value: "3×", label: "Faster time-to-hire" },
-          { value: "60%", label: "Recruiter cost saved" },
-          { value: "94%", label: "Screening accuracy" },
-          { value: "12mo", label: "Retention predicted" },
-        ].map(({ value, label }) => (
-          <div
-            key={label}
-            className="flex flex-col gap-1 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-4 text-center"
-          >
-            <span className="text-2xl font-bold text-[var(--color-accent)]">{value}</span>
-            <span className="text-xs text-[var(--color-ink-3)]">{label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+// Hero is now in src/components/HeroSection.tsx
 
 // ─── Problem ────────────────────────────────────────────────────────────────
 
@@ -331,7 +229,7 @@ function Features() {
         "Auto-calibrates to your hire signals over time",
         "Respects GDPR, CCPA, and opt-out preferences",
       ],
-      accent: "#2dd4a0",
+      accent: "hsl(262 83% 65%)",
       image: "/feature-sourcing.png",
     },
     {
@@ -541,7 +439,7 @@ function Pricing() {
             >
               {highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold text-[#080c10]">
+                  <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold text-white">
                     Most popular
                   </span>
                 </div>
@@ -568,7 +466,7 @@ function Pricing() {
                 href="https://app.grow.contact/signup"
                 className={`mt-auto block rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-opacity hover:opacity-90 ${
                   highlight
-                    ? "bg-[var(--color-accent)] text-[#080c10]"
+                    ? "bg-[var(--color-accent)] text-white"
                     : "border border-[var(--color-border)] text-[var(--color-ink-2)] hover:text-[var(--color-ink)]"
                 }`}
               >
@@ -593,7 +491,7 @@ function FinalCTA() {
           className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[300px] w-[600px]"
           style={{
             background:
-              "radial-gradient(ellipse at top, #2dd4a020, transparent 70%)",
+              "radial-gradient(ellipse at top, hsla(262,83%,58%,0.08), transparent 70%)",
           }}
         />
         <Tag>Ready to scale?</Tag>
@@ -606,7 +504,7 @@ function FinalCTA() {
         </p>
         <a
           href="mailto:hello@grow.ai?subject=Demo Request"
-          className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+          className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90"
         >
           Request a demo <ArrowRight className="h-4 w-4" />
         </a>
@@ -618,53 +516,6 @@ function FinalCTA() {
   );
 }
 
-// ─── Footer ──────────────────────────────────────────────────────────────────
-
-function Footer() {
-  return (
-    <footer className="border-t border-[var(--color-border)] px-6 py-12 md:px-12">
-      <div className="mx-auto max-w-5xl">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="flex flex-col gap-2">
-            <span className="text-lg font-bold text-[var(--color-ink)]">Grow</span>
-            <p className="max-w-xs text-sm text-[var(--color-ink-3)]">
-              AI-powered talent operating system for high-growth teams.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
-            <div className="flex flex-col gap-3">
-              <p className="font-semibold text-[var(--color-ink)]">Product</p>
-              <a href="#features" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Features</a>
-              <a href="#pricing" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Pricing</a>
-              <a href="/blog" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Changelog</a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <p className="font-semibold text-[var(--color-ink)]">Company</p>
-              <a href="/about" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">About</a>
-              <a href="/blog" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Blog</a>
-              <a href="mailto:hello@grow.ai" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Contact</a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <p className="font-semibold text-[var(--color-ink)]">Legal</p>
-              <a href="/privacy" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Privacy Policy</a>
-              <a href="/terms" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Terms of Service</a>
-              <a href="mailto:gudmundur@grow.contact" className="text-[var(--color-ink-3)] hover:text-[var(--color-ink)] transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-        <div className="mt-12 flex flex-col items-start gap-2 border-t border-[var(--color-border)] pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-[var(--color-ink-3)]">
-            © {new Date().getFullYear()} Grow. All rights reserved.
-          </p>
-          <p className="text-xs text-[var(--color-ink-3)]">
-            Built for Series A–C teams moving fast.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
@@ -672,7 +523,7 @@ export default function HomePage() {
     <>
       <Nav />
       <main>
-        <Hero />
+        <HeroSection />
         <Problem />
         <SolutionOverview />
         <Features />

@@ -199,7 +199,7 @@ export default function IntegrationsPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsl(262 83% 58%) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
@@ -213,7 +213,7 @@ export default function IntegrationsPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started <ArrowRight className="h-4 w-4" />
             </a>
@@ -335,7 +335,7 @@ export default function IntegrationsPage() {
                 </a>
                 <a
                   href="https://app.grow.contact"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+                  className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                 >
                   View API docs <ArrowRight className="h-4 w-4" />
                 </a>

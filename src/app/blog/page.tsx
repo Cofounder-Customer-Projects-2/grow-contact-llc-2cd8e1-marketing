@@ -44,7 +44,7 @@ const posts = [
     author: "Grow Team",
     date: "May 6, 2026",
     readTime: "8 min read",
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
     featured: true,
   },
   {
@@ -130,7 +130,7 @@ export default function BlogPage() {
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[700px] rounded-full opacity-15"
             style={{
-              background: "radial-gradient(ellipse at center, #2dd4a0 0%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, hsl(262 83% 58%) 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />

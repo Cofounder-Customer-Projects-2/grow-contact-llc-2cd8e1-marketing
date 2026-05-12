@@ -37,7 +37,7 @@ const steps = [
     icon: <Zap className="h-5 w-5" />,
     title: "Instant applicant triage",
     desc: "Every inbound application is screened, scored, and ranked against your criteria in seconds — not days. Grow reads résumés, matches competencies, and flags your top candidates automatically.",
-    accent: "#2dd4a0",
+    accent: "hsl(262 83% 65%)",
   },
   {
     icon: <Users className="h-5 w-5" />,
@@ -94,7 +94,7 @@ export default function HighVolumeHiringPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://app.grow.contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Get started <ArrowRight className="h-4 w-4" />
               </a>
@@ -185,7 +185,7 @@ export default function HighVolumeHiringPage() {
                 {
                   vertical: "Operations & Logistics",
                   desc: "Warehouse, fulfillment, and field operations teams hiring dozens per week.",
-                  accent: "#2dd4a0",
+                  accent: "hsl(262 83% 65%)",
                 },
                 {
                   vertical: "Retail & Hospitality",
@@ -272,7 +272,7 @@ export default function HighVolumeHiringPage() {
             </p>
             <a
               href="https://app.grow.contact"
-              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-[#080c10] transition-opacity hover:opacity-90"
+              className="relative inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started free <ArrowRight className="h-4 w-4" />
             </a>
